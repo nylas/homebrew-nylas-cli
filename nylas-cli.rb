@@ -11,8 +11,8 @@ class NylasCli < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nylas/nylas-cli/releases/download/v1.0.0-preview1/nylas-cli_1.0.0-preview1_darwin_amd64.tar.gz"
-      sha256 "ea536cb302c979bfd99b65948688c9c7b5b817a3520245e664d8ccccc6534a77"
+      url "https://download.nylas.com/nylas-cli/v1.0.0-preview1/nylas-cli_1.0.0-preview1_darwin_amd64.tar.gz"
+      sha256 "fdc7a8db5ccdc265fca31ea14a9cfe8a3ae313b98f8704af76a3a11aec241277"
     end
   end
 
