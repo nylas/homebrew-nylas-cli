@@ -17,6 +17,6 @@ class NylasCli < Formula
   end
 
   def install
-    bin.install "nylas-cli"
+    bin.install "nyl"
   end
 end
