@@ -5,18 +5,18 @@
 class Nyl < Formula
   desc "Nylas Command Line Utility"
   homepage "https://nylas.com"
-  version "1.0.0-preview2"
+  version "1.0.0-preview3"
   bottle :unneeded
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://download.nylas.com/nylas-cli/v1.0.0-preview2/nylas-cli_1.0.0-preview2_darwin_amd64.tar.gz"
-      sha256 "bf9b837c365cbc45e0f9f28abc8af5ebdc7d7fa7ea10c75ad435635d7fecdb9a"
+      url "https://download.nylas.com/nylas-cli/v1.0.0-preview3/nylas-cli_1.0.0-preview3_darwin_amd64.tar.gz"
+      sha256 "195ad980633901b640c927593198e51e0dc3b4af1eac5f7036f66d797eaa6219"
     end
   end
 
   def install
-    bin.install "nylas-cli"
+    bin.install "nyl"
   end
 end
