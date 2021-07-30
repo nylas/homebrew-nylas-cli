@@ -5,28 +5,28 @@
 class Nylas < Formula
   desc "Nylas Command Line Utility"
   homepage "https://nylas.com"
-  version "1.0.0-preview13"
+  version "1.0.0-beta1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://download.nylas.com/nylas-cli/v1.0.0-preview13/nylas-cli_1.0.0-preview13_Darwin_x86_64.tar.gz"
-      sha256 "1ed27d524f555d1033f0060b15bb2a8b02ee666971dc1a94be45af3f6e01ffdd"
+      url "https://download.nylas.com/nylas-cli/v1.0.0-beta1/nylas-cli_1.0.0-beta1_Darwin_x86_64.tar.gz"
+      sha256 "923a085f3569bdd979ee5a7e94534cda3a038dae640cf8a374d363eb8291a596"
     end
     if Hardware::CPU.arm?
-      url "https://download.nylas.com/nylas-cli/v1.0.0-preview13/nylas-cli_1.0.0-preview13_Darwin_arm64.tar.gz"
-      sha256 "7e4ffc2e13bbd069ecadf3353ced4a4441fbfccde470b50b94de791164352288"
+      url "https://download.nylas.com/nylas-cli/v1.0.0-beta1/nylas-cli_1.0.0-beta1_Darwin_arm64.tar.gz"
+      sha256 "5346f7e963521dad5fbe7fdd3e42399b6038f6bcd5601ffa2171a608ad9447e2"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://download.nylas.com/nylas-cli/v1.0.0-preview13/nylas-cli_1.0.0-preview13_Linux_x86_64.tar.gz"
-      sha256 "99713ac74354c322f5735187764624a3e6d6e40ede63dbd6c8c0a18d6317904e"
+      url "https://download.nylas.com/nylas-cli/v1.0.0-beta1/nylas-cli_1.0.0-beta1_Linux_x86_64.tar.gz"
+      sha256 "451e93711e9da9d3a16c89599fb7f63df18c66241c9135d4e82df3d904daa145"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://download.nylas.com/nylas-cli/v1.0.0-preview13/nylas-cli_1.0.0-preview13_Linux_arm64.tar.gz"
-      sha256 "a9aeda36bd173103ffc5012b21826b1ed688f932271c0780cdaa36211814a409"
+      url "https://download.nylas.com/nylas-cli/v1.0.0-beta1/nylas-cli_1.0.0-beta1_Linux_arm64.tar.gz"
+      sha256 "35dcc24a4376acaddf46f265d362ab0290f55c3755a333cf79d9c15949ed8cf7"
     end
   end
 
