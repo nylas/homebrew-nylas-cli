@@ -6,7 +6,6 @@ class Nylas < Formula
   desc "Nylas Command Line Utility"
   homepage "https://nylas.com"
   version "1.0.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
