@@ -5,31 +5,43 @@
 class Nylas < Formula
   desc "Nylas Command Line Utility"
   homepage "https://nylas.com"
-  version "1.0.0"
+  version "1.0.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://download.nylas.com/nylas-cli/v1.0.0/nylas-cli_1.0.0_Darwin_x86_64.tar.gz"
-      sha256 "7c8c8acb0a22bd72474b369305b573817d87282ec063995b060e4a372a60b42c"
-    end
     if Hardware::CPU.arm?
-      url "https://download.nylas.com/nylas-cli/v1.0.0/nylas-cli_1.0.0_Darwin_arm64.tar.gz"
-      sha256 "c781ae4253c5d4d8fbacf8f1169002e4bffcc118222eb9db419913043135cfe4"
+      url "https://download.nylas.com/nylas-cli/v1.0.1/nylas-cli_1.0.1_Darwin_arm64.tar.gz"
+      sha256 "bcc10cb89818e02d39b4a773d14907095ce1b2f3a280a07ff83db4f4dcc35fe0"
+
+      def install
+        bin.install "nylas"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://download.nylas.com/nylas-cli/v1.0.1/nylas-cli_1.0.1_Darwin_x86_64.tar.gz"
+      sha256 "1e20f316f28b10118bdbda608499e3fcc1c45cf7bd8fd80be4a429c31bdf3e63"
+
+      def install
+        bin.install "nylas"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://download.nylas.com/nylas-cli/v1.0.0/nylas-cli_1.0.0_Linux_x86_64.tar.gz"
-      sha256 "4815aeb64a5aa25639bb85021f7705366910e0e67274126d1014e0d34a138fb4"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://download.nylas.com/nylas-cli/v1.0.0/nylas-cli_1.0.0_Linux_arm64.tar.gz"
-      sha256 "2ae1421389274c39fa81964207c7d46d609a569a92a17b76d9994a031e1ac184"
-    end
-  end
+      url "https://download.nylas.com/nylas-cli/v1.0.1/nylas-cli_1.0.1_Linux_arm64.tar.gz"
+      sha256 "f3194a7a24ccf148189f2ed85b349435f69f9a6c4600a5fb56f374c381570d58"
 
-  def install
-    bin.install "nylas"
+      def install
+        bin.install "nylas"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://download.nylas.com/nylas-cli/v1.0.1/nylas-cli_1.0.1_Linux_x86_64.tar.gz"
+      sha256 "965c3f472ef0c81d92c721537c86fffd0c9954f122fb2a8f3b1229f5ea58a617"
+
+      def install
+        bin.install "nylas"
+      end
+    end
   end
 end
