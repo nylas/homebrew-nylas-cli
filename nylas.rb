@@ -5,20 +5,20 @@
 class Nylas < Formula
   desc "Nylas Command Line Utility"
   homepage "https://nylas.com"
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://download.nylas.com/nylas-cli/v1.0.1/nylas-cli_1.0.1_Darwin_arm64.tar.gz"
-      sha256 "bcc10cb89818e02d39b4a773d14907095ce1b2f3a280a07ff83db4f4dcc35fe0"
+      url "https://download.nylas.com/nylas-cli/v1.0.2/nylas-cli_1.0.2_Darwin_arm64.tar.gz"
+      sha256 "2c4ee4438183155cf944aba043ca7a00010331ac41ac213215085bb75b138111"
 
       def install
         bin.install "nylas"
       end
     end
     if Hardware::CPU.intel?
-      url "https://download.nylas.com/nylas-cli/v1.0.1/nylas-cli_1.0.1_Darwin_x86_64.tar.gz"
-      sha256 "1e20f316f28b10118bdbda608499e3fcc1c45cf7bd8fd80be4a429c31bdf3e63"
+      url "https://download.nylas.com/nylas-cli/v1.0.2/nylas-cli_1.0.2_Darwin_x86_64.tar.gz"
+      sha256 "fdef41662aabf80f90bf94fb55f14a5b95ca501dfeff40866ffdd06ed22b9159"
 
       def install
         bin.install "nylas"
@@ -28,16 +28,16 @@ class Nylas < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://download.nylas.com/nylas-cli/v1.0.1/nylas-cli_1.0.1_Linux_arm64.tar.gz"
-      sha256 "f3194a7a24ccf148189f2ed85b349435f69f9a6c4600a5fb56f374c381570d58"
+      url "https://download.nylas.com/nylas-cli/v1.0.2/nylas-cli_1.0.2_Linux_arm64.tar.gz"
+      sha256 "e1349025d514a1ce646f1b8a645cc3ff67a271b8e39a21ffcbce7287dbecd9db"
 
       def install
         bin.install "nylas"
       end
     end
     if Hardware::CPU.intel?
-      url "https://download.nylas.com/nylas-cli/v1.0.1/nylas-cli_1.0.1_Linux_x86_64.tar.gz"
-      sha256 "965c3f472ef0c81d92c721537c86fffd0c9954f122fb2a8f3b1229f5ea58a617"
+      url "https://download.nylas.com/nylas-cli/v1.0.2/nylas-cli_1.0.2_Linux_x86_64.tar.gz"
+      sha256 "31115b8be502edeed2e073d5d7a4331a8bae28f4b0673da0c27bbdd2bd58f7c8"
 
       def install
         bin.install "nylas"
