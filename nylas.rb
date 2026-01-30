@@ -33,10 +33,13 @@ class Nylas < Formula
     bin.install "nylas"
 
     # Install shell completions
+    # Disable keyring during completion generation to avoid macOS Keychain prompts
+    ENV["NYLAS_DISABLE_KEYRING"] = "true"
     generate_completions_from_executable(bin/"nylas", "completion")
   end
 
   test do
+    ENV["NYLAS_DISABLE_KEYRING"] = "true"
     system "#{bin}/nylas", "--version"
   end
 end
