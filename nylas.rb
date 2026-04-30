@@ -49,7 +49,7 @@ class Nylas < Formula
         npx skills add nylas/skills --skill nylas-cli
 
       Documentation: https://cli.nylas.com/
-      Issues: https://github.com/nylas/cli/issues                                                                                      
+      Issues: https://github.com/nylas/cli/issues
       Changelog: https://github.com/nylas/cli/releases
     EOS
   end
