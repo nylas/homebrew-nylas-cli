@@ -38,6 +38,22 @@ class Nylas < Formula
     generate_completions_from_executable(bin/"nylas", "completion")
   end
 
+  def caveats
+    <<~EOS
+      Get started:
+        nylas init
+
+      Install Nylas skills for AI Agents (https://github.com/nylas/skills):
+        npx skills add nylas/skills                          # all skills
+        npx skills add nylas/skills --skill nylas-api        # individual
+        npx skills add nylas/skills --skill nylas-cli
+
+      Documentation: https://cli.nylas.com/
+      Issues: https://github.com/nylas/cli/issues                                                                                      
+      Changelog: https://github.com/nylas/cli/releases
+    EOS
+  end
+
   test do
     ENV["NYLAS_DISABLE_KEYRING"] = "true"
     system "#{bin}/nylas", "--version"
