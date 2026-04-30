@@ -4,28 +4,28 @@
 class Nylas < Formula
   desc "CLI for Nylas API - manage email, calendar, and contacts"
   homepage "https://github.com/nylas/cli"
-  version "3.1.3"
+  version "3.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nylas/cli/releases/download/v3.1.3/nylas_3.1.3_darwin_amd64.tar.gz"
-      sha256 "92d05a1e03184a71c90ba0e3b69ceeb35b9067cfd8323bb5037a7175a9fe93c9"
+      url "https://github.com/nylas/cli/releases/download/v3.1.5/nylas_3.1.5_darwin_amd64.tar.gz"
+      sha256 "7885501fd027e50be0a3ea4d7faf0cda2d073c9541f0f4d933c617ae1a3c32a3"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nylas/cli/releases/download/v3.1.3/nylas_3.1.3_darwin_arm64.tar.gz"
-      sha256 "54511612c54ff9e91995b96b46bdd296091f50da2dcb1290876997f910d31bba"
+      url "https://github.com/nylas/cli/releases/download/v3.1.5/nylas_3.1.5_darwin_arm64.tar.gz"
+      sha256 "2ec06fdcdfc2526167ec493c8a9e00ea0f72e4d96825cfdc8e5f6269bab52ebc"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/nylas/cli/releases/download/v3.1.3/nylas_3.1.3_linux_amd64.tar.gz"
-      sha256 "7998385a9d478709f123194bb5889abf0384a5fc40104dd84fd4a6b21324a26e"
+      url "https://github.com/nylas/cli/releases/download/v3.1.5/nylas_3.1.5_linux_amd64.tar.gz"
+      sha256 "98baea9cbb606e13b88e76d1447aa5c9a86aa0c620f3fc213fd4089d0ddd4177"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nylas/cli/releases/download/v3.1.3/nylas_3.1.3_linux_arm64.tar.gz"
-      sha256 "85b9cea69e1e9cd142b73303d3e1f51e5020fd4636a4998755b771bac85987c2"
+      url "https://github.com/nylas/cli/releases/download/v3.1.5/nylas_3.1.5_linux_arm64.tar.gz"
+      sha256 "0622b2ef9865634a266adfa85a315eba7ace08626b2a950552109040b6857481"
     end
   end
 
@@ -36,6 +36,22 @@ class Nylas < Formula
     # Disable keyring during completion generation to avoid macOS Keychain prompts
     ENV["NYLAS_DISABLE_KEYRING"] = "true"
     generate_completions_from_executable(bin/"nylas", "completion")
+  end
+
+  def caveats
+    <<~EOS
+      Get started:
+        nylas init
+
+      Install Nylas skills for AI Agents (https://github.com/nylas/skills):
+        npx skills add nylas/skills                          # all skills
+        npx skills add nylas/skills --skill nylas-api        # individual
+        npx skills add nylas/skills --skill nylas-cli
+
+      Documentation: https://cli.nylas.com/
+      Issues: https://github.com/nylas/cli/issues
+      Changelog: https://github.com/nylas/cli/releases
+    EOS
   end
 
   test do
