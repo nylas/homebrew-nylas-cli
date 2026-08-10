@@ -4,28 +4,28 @@
 class Nylas < Formula
   desc "CLI for Nylas API - manage email, calendar, and contacts"
   homepage "https://github.com/nylas/cli"
-  version "3.1.28"
+  version "3.1.29"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nylas/cli/releases/download/v3.1.28/nylas_3.1.28_darwin_amd64.tar.gz"
-      sha256 "a9206ba77c1d5ca0220ef5c46902769158fd229df569056bb00fffec327526d8"
+      url "https://github.com/nylas/cli/releases/download/v3.1.29/nylas_3.1.29_darwin_amd64.tar.gz"
+      sha256 "cfd9aafc5c3f41fa1fb6cf600606c8ca2d6635394afcd39d5ca211603cc514cd"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nylas/cli/releases/download/v3.1.28/nylas_3.1.28_darwin_arm64.tar.gz"
-      sha256 "17334f5fca77fc37f4ecb1a7d87863b011f115e556597302d892fab6378f53ce"
+      url "https://github.com/nylas/cli/releases/download/v3.1.29/nylas_3.1.29_darwin_arm64.tar.gz"
+      sha256 "9add773624464981a4e88b1b231357e85a4109fd9394c4930408a1e36d5a6068"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/nylas/cli/releases/download/v3.1.28/nylas_3.1.28_linux_amd64.tar.gz"
-      sha256 "c136237a41bc3d8496a75391ac8234d39f05aa87c45050865f1f3ed11fa0c3bc"
+      url "https://github.com/nylas/cli/releases/download/v3.1.29/nylas_3.1.29_linux_amd64.tar.gz"
+      sha256 "e80429883ef688739c2330daa1d8b30939bf884b4145b7f5854a3025dc29174e"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nylas/cli/releases/download/v3.1.28/nylas_3.1.28_linux_arm64.tar.gz"
-      sha256 "ac20355a41edec874dfd4a9cca6b4e0d6853aac4a3e2118762c49888c3045fc1"
+      url "https://github.com/nylas/cli/releases/download/v3.1.29/nylas_3.1.29_linux_arm64.tar.gz"
+      sha256 "ddd0ebf9195a0c96d25c6caecffea2389ccf6f0795b5f0d63292e94f10366305"
     end
   end
 
